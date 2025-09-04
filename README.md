@@ -50,3 +50,25 @@ git commit -m "Mensagem explicativa"
 - Sintaxe simples e enxuta, com menos código repetitivo.
 
 - Suporta POO e programação funcional.
+
+
+# Tipos de Variáveis em Kotlin
+
+| Tipo       | Descrição | Exemplo |
+|------------|-----------|---------|
+| `Int`      | Números inteiros (32 bits) | `val idade: Int = 20` |
+| `Long`     | Números inteiros longos (64 bits) | `val populacao: Long = 7500000000` |
+| `Short`    | Números inteiros curtos (16 bits) | `val numero: Short = 30000` |
+| `Byte`     | Números inteiros pequenos (8 bits) | `val b: Byte = 120` |
+| `Double`   | Números decimais (64 bits, maior precisão) | `val peso: Double = 70.5` |
+| `Float`    | Números decimais (32 bits, menor precisão) | `val altura: Float = 1.75f` |
+| `Char`     | Um único caractere | `val letra: Char = 'A'` |
+| `String`   | Texto (sequência de caracteres) | `val nome: String = "Maria"` |
+| `Boolean`  | Valores lógicos (true / false) | `val ativo: Boolean = true` |
+
+---
+
+📌 **Dica:**  
+- Use `val` para variáveis **imutáveis** (constantes).  
+- Use `var` para variáveis **mutáveis** (que podem mudar de valor).  
+
