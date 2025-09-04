@@ -31,4 +31,22 @@ A sequência mais comum é:
 ```bash
 git add .
 git commit -m "Mensagem explicativa"
-git push origin main
+```
+
+
+# Introdução a Linguagem de Programação Kotlin
+
+## Vantagens:
+- Criado pela JetBrains em 2011.
+
+- Oficialmente suportado pelo Google para Android desde 2017.
+
+- Estaticamente tipada (tipos definidos em tempo de compilação).
+
+- Pode ser usada em Android, backend, desktop e web.
+
+- Interoperável com Java (funciona junto no mesmo projeto).
+
+- Sintaxe simples e enxuta, com menos código repetitivo.
+
+- Suporta POO e programação funcional.
