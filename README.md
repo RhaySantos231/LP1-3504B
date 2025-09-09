@@ -72,3 +72,21 @@ git commit -m "Mensagem explicativa"
 - Use `val` para variáveis **imutáveis** (constantes).  
 - Use `var` para variáveis **mutáveis** (que podem mudar de valor).  
 
+
+# Operadores Matemáticos em Programação
+
+- **`+` (Adição)** → Soma valores.  
+  Exemplo: `5 + 3 = 8`
+
+- **`-` (Subtração)** → Subtrai valores.  
+  Exemplo: `10 - 4 = 6`
+
+- **`*` (Multiplicação)** → Multiplica valores.  
+  Exemplo: `6 * 2 = 12`
+
+- **`/` (Divisão)** → Divide valores.  
+  Exemplo: `15 / 3 = 5`
+
+- **`%` (Módulo ou Resto da Divisão)** → Retorna o resto de uma divisão.  
+  Exemplo: `10 % 3 = 1`
+
