@@ -72,21 +72,42 @@ git commit -m "Mensagem explicativa"
 - Use `val` para variáveis **imutáveis** (constantes).  
 - Use `var` para variáveis **mutáveis** (que podem mudar de valor).  
 
-
 # Operadores Matemáticos em Programação
 
-- **`+` (Adição)** → Soma valores.  
-  Exemplo: `5 + 3 = 8`
+## Principais Operadores
 
-- **`-` (Subtração)** → Subtrai valores.  
-  Exemplo: `10 - 4 = 6`
+1. **`+` (Adição)** → Soma valores.  
+   Exemplo: `5 + 3 = 8`
 
-- **`*` (Multiplicação)** → Multiplica valores.  
-  Exemplo: `6 * 2 = 12`
+2. **`-` (Subtração)** → Subtrai valores.  
+   Exemplo: `10 - 4 = 6`
 
-- **`/` (Divisão)** → Divide valores.  
-  Exemplo: `15 / 3 = 5`
+3. **`*` (Multiplicação)** → Multiplica valores.  
+   Exemplo: `6 * 2 = 12`
 
-- **`%` (Módulo ou Resto da Divisão)** → Retorna o resto de uma divisão.  
-  Exemplo: `10 % 3 = 1`
+4. **`/` (Divisão)** → Divide valores.  
+   Exemplo: `15 / 3 = 5`
 
+5. **`%` (Módulo ou Resto da Divisão)** → Retorna o resto de uma divisão.  
+   Exemplo: `10 % 3 = 1`
+
+
+# Estruturas Condicionais (if / else)
+
+O `if` e o `else` são usados para tomar decisões no programa.  
+Eles verificam uma condição (verdadeira ou falsa) e executam o bloco correspondente.
+
+## Exemplos
+
+1. **If simples**  
+```kotlin
+val idade = 18
+
+if (idade >= 18) {
+    println("Você é maior de idade")
+}
+```
+---
+
+## 📂 Lista de Atividades
+- [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://github.com/RhaySantos231/LP1-3504B/blob/main/Lista%20de%20Atividades%201.pdf)
