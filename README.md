@@ -110,4 +110,4 @@ if (idade >= 18) {
 ---
 
 ## 📂 Lista de Atividades
-- [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://github.com/RhaySantos231/LP1-3504B/blob/main/Lista%20de%20Atividades%201.pdf)
+- [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing)
