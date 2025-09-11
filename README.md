@@ -99,12 +99,14 @@ Eles verificam uma condição (verdadeira ou falsa) e executam o bloco correspon
 
 ## Exemplos
 
-1. **If simples**  
+1. **If/else simples**  
 ```kotlin
 val idade = 18
 
 if (idade >= 18) {
     println("Você é maior de idade")
+}else{
+    println("Você é menor de idade")
 }
 ```
 ---
