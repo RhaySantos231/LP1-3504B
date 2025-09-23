@@ -127,6 +127,55 @@ if (nota >= 90) {
     println("Reprovado")
 }
 ```
+# Estruturas de Repetição em Kotlin
+
+As estruturas de repetição permitem executar um bloco de código várias vezes, enquanto uma condição for verdadeira. Em Kotlin, as principais estruturas são `while` e `do/while`.
+
+---
+
+## Estrutura `while`
+
+O `while` executa o bloco de código **enquanto a condição for verdadeira**.  
+A condição é verificada **antes** de cada execução.
+
+### Sintaxe básica
+```kotlin
+while (condicao) {
+    // código a ser repetido
+}
+```
+## 2. Estrutura `do/while`
+
+O `do/while` executa o bloco **pelo menos uma vez**, e só depois verifica a condição.  
+Isso garante que o bloco seja executado mesmo que a condição seja falsa no início.
+
+### Sintaxe
+```kotlin
+do {
+    // código a ser repetido
+} while (condicao)
+```
+# Estrutura `when`
+
+O `when` é uma estrutura de controle de fluxo em Kotlin, semelhante ao `switch` de outras linguagens, mas mais poderosa. Ele permite executar diferentes blocos de código dependendo do valor de uma expressão.
+
+---
+
+## Sintaxe básica
+
+```kotlin
+when (expressao) {
+    valor1 -> {
+        // código a ser executado se expressao == valor1
+    }
+    valor2 -> {
+        // código a ser executado se expressao == valor2
+    }
+    else -> {
+        // código a ser executado se nenhum valor corresponder
+    }
+}
+```
 ---
 # Operadores de Comparação em Kotlin
 
@@ -143,4 +192,5 @@ if (nota >= 90) {
 ---
 
 ## 📂 Lista de Atividades
-- [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing)
+- [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing) (inicio 16/09| fim: 18/09) 
+- [Lista 2 – When, while e do while]([https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing](https://docs.google.com/document/d/1KJkG6LDJF1gjS-W6ej0sL9icYyOTcWFZgHjBFVMWesY/edit?usp=sharing)) (inicio: 23/09 | fim: 25/09)
