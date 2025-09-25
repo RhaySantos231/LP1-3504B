@@ -193,4 +193,4 @@ when (expressao) {
 
 ## 📂 Lista de Atividades
 - [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing) (inicio 16/09| fim: 18/09) 
-- [Lista 2 – When, while e do while](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing) (inicio: 23/09 | fim: 25/09)
+- [Lista 2 – When, while e do while](https://docs.google.com/document/d/1X7piSX--u729lxASkoCxMtXNbnMEUwBYLeS39EWXcGU/edit?tab=t.0#heading=h.bmwx0c14zlpb) (inicio: 23/09 | fim: 25/09)
