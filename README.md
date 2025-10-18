@@ -247,7 +247,19 @@ println(frutas[0])           // Exibe "Maçã"
 | `joinToString()` | Converte a lista em uma única string formatada | `println(frutas.joinToString(", "))` |
 
 ---
+# 🔁 Estrutura de Repetição `for` em Kotlin
 
+O `for` é usado para percorrer **intervalos**, **listas**, **arrays** e **strings** de forma simples.
+
+---
+
+## 🧩 Estrutura básica
+
+```kotlin
+for (item in colecao) {
+    // código a ser repetido
+}
+```
 💡 **Dica:**  
 Use `listOf()` para coleções fixas e `mutableListOf()` quando quiser **adicionar ou remover itens** dinamicamente.
 
