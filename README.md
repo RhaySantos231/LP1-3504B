@@ -252,7 +252,6 @@ println(frutas[0])           // Exibe "Maçã"
 O `for` é usado para percorrer **intervalos**, **listas**, **arrays** e **strings** de forma simples.
 
 ---
-
 ## 🧩 Estrutura básica
 
 ```kotlin
@@ -262,6 +261,43 @@ for (item in colecao) {
 ```
 💡 **Dica:**  
 Use `listOf()` para coleções fixas e `mutableListOf()` quando quiser **adicionar ou remover itens** dinamicamente.
+
+
+# Funções 
+Uma função é um bloco de código reutilizável que executa uma tarefa. Elas ajudam a organizar melhor o código, evitar repetição e facilitam a manutenção do programa.
+## Estrura de uma Funções
+fun nomeDaFuncao(parametros): TipoDeRetorno {
+    // ações
+}
+| Componente      | Descrição                                    |
+| --------------- | -------------------------------------------- |
+| `fun`           | Palavra-chave usada para declarar uma função |
+| `nomeDaFuncao`  | Nome que identifica a função                 |
+| `parametros`    | Dados que a função pode receber (opcional)   |
+| `TipoDeRetorno` | Tipo de dado que a função devolve (opcional) |
+| `{ ... }`       | Bloco de código executado                    |
+
+## Exemplo: Função com retorno
+```
+ fun soma(a: Int, b: Int): Int {
+    return a + b
+}
+
+```
+## Função sem retorno (Unit)
+```
+fun mostrarMensagem() {
+    println("Olá! Esta é uma função sem retorno.")
+}
+```
+## Função com parâmetro opcional
+```
+fun saudacao(nome: String = "Visitante") {
+    println("Bem-vindo, $nome!")
+}
+
+```
+---
 
 ## 📂 Lista de Atividades
 - [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing) (inicio 16/09| fim: 18/09) 
