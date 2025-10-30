@@ -309,7 +309,7 @@ Por exemplo, podemos ter a classe `Carro` como um molde, e dela criar vários ob
 
 ---
 
-## 🧱 Estrutura básica de uma classe
+## Estrutura básica de uma classe
 
 ```kotlin
 class Carro {
@@ -322,13 +322,6 @@ class Carro {
     }
 }
 ```
-Explicando o código:
-
-class Carro → Define a classe.
-
-var marca, var modelo, var ano → São propriedades (ou atributos).
-
-fun ligar() → É um método, ou seja, uma função dentro da classe.
 
 ## Criando e usando objetos
 Para usar uma classe, criamos objetos dela (ou seja, instâncias):
@@ -361,9 +354,206 @@ fun main() {
 ```
 ---
 
+### open class — Permite Herança
+
+Por padrão, as classes em Kotlin são “final”, ou seja, não podem ser herdadas.
+Para permitir que outra classe herde dela, usamos o modificador open.
+```
+open class Animal(val nome: String) {
+    fun dormir() {
+        println("$nome está dormindo...")
+    }
+
+    open fun fazerSom() {
+        println("$nome fez um som!")
+    }
+}
+
+class Cachorro(nome: String) : Animal(nome) {
+    override fun fazerSom() {
+        println("$nome latiu: Au Au!")
+    }
+}
+
+fun main() {
+    val dog = Cachorro("Rex")
+    dog.dormir()
+    dog.fazerSom()
+}
+
+```
+### Explicação:
+
+open class Animal → permite que a classe seja herdada.
+
+: Animal(nome) → indica que a classe Cachorro herda de Animal.
+
+override fun → sobrescreve um método da classe pai.
+
+### Herança e Polimorfismo
+
+Quando uma classe herda outra, ela ganha acesso aos métodos e atributos da classe pai.
+Podemos também modificar o comportamento desses métodos (isso é o polimorfismo).
+```
+open class Pessoa(val nome: String) {
+    open fun apresentar() {
+        println("Olá, meu nome é $nome.")
+    }
+}
+
+class Professor(nome: String, val disciplina: String) : Pessoa(nome) {
+    override fun apresentar() {
+        println("Olá, sou o professor $nome e leciono $disciplina.")
+    }
+}
+
+fun main() {
+    val p1 = Pessoa("Maria")
+    val p2 = Professor("João", "Kotlin")
+
+    p1.apresentar()
+    p2.apresentar()
+}
+
+```
+
+## Encapsulamento
+
+Encapsulamento significa proteger os dados de uma classe, controlando como eles podem ser acessados ou alterados.
+Em Kotlin, usamos modificadores de visibilidade:
+
+Modificador	Acesso permitido em...
+public (padrão)	Qualquer lugar
+private	Apenas dentro da própria classe
+protected	Na classe e em subclasses
+internal	Dentro do mesmo módulo/projeto
+
+```
+class ContaBancaria {
+    private var saldo: Double = 0.0
+
+    fun depositar(valor: Double) {
+        if (valor > 0) {
+            saldo += valor
+            println("Depósito de R$ $valor realizado com sucesso.")
+        }
+    }
+
+    fun verSaldo() {
+        println("Saldo atual: R$ $saldo")
+    }
+}
+
+fun main() {
+    val conta = ContaBancaria()
+    conta.depositar(100.0)
+    conta.verSaldo()
+    // conta.saldo = 999.0  ❌ ERRO: saldo é privado!
+}
+```
+### data class — Classes de Dados
+
+Usadas para armazenar informações, as data class já vêm com:
+
+   toString() automático
+
+   equals() e hashCode()
+
+   copy() para duplicar objetos facilmente
+
+   data class Pessoa(val nome: String, val idade: Int)
+   
+```
+fun main() {
+    val p1 = Pessoa("Ana", 20)
+    val p2 = p1.copy(idade = 21)
+
+    println(p1)         // Pessoa(nome=Ana, idade=20)
+    println(p2)         // Pessoa(nome=Ana, idade=21)
+}
+```
+### Objeto Único (object)
+
+Em Kotlin, o object é usado para criar uma única instância (singleton) automaticamente.
+Serve bem para utilitários, contadores ou configurações.
+```
+object Contador {
+    var valor = 0
+
+    fun incrementar() {
+        valor++
+        println("Contagem atual: $valor")
+    }
+}
+
+fun main() {
+    Contador.incrementar()
+    Contador.incrementar()
+}
+
+
+```
+### Classe Abstrata
+
+Uma classe abstrata serve como modelo e não pode ser instanciada diretamente.
+Ela pode conter métodos abstratos, que devem ser implementados nas subclasses.
+
+```
+abstract class Funcionario(val nome: String) {
+    abstract fun calcularSalario(): Double
+
+    fun apresentar() {
+        println("Funcionário: $nome")
+    }
+}
+
+class Professor(nome: String, val aulas: Int) : Funcionario(nome) {
+    override fun calcularSalario(): Double {
+        return aulas * 50.0
+    }
+}
+
+fun main() {
+    val prof = Professor("Carlos", 20)
+    prof.apresentar()
+    println("Salário: R$ ${prof.calcularSalario()}")
+}
+```
+
+### Classe com Herança + Construtor + Encapsulamento
+
+```
+open class Pessoa(
+    val nome: String,
+    private var idade: Int
+) {
+    open fun apresentar() {
+        println("Olá! Meu nome é $nome e tenho $idade anos.")
+    }
+}
+
+class Aluno(nome: String, idade: Int, val matricula: String) : Pessoa(nome, idade) {
+    override fun apresentar() {
+        println("Sou o aluno $nome, matrícula $matricula.")
+    }
+}
+
+fun main() {
+    val aluno = Aluno("Lucas", 18, "2025A01")
+    aluno.apresentar()
+}
+
+```
+📘 Saída:
+```
+Sou o aluno Lucas, matrícula 2025A01.
+```
+
+
 
 ## 📂 Lista de Atividades
 - [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing) (inicio 16/09| fim: 18/09) 
 - [Lista 2 – When, while e do while](https://docs.google.com/document/d/1X7piSX--u729lxASkoCxMtXNbnMEUwBYLeS39EWXcGU/edit?tab=t.0#heading=h.bmwx0c14zlpb) (inicio: 23/09 | fim: 25/09)
 - [Lista 3 - Array](https://docs.google.com/document/d/1vNd9r-2BIz2kouJxbMfPuK3-DWaq65unVfrng82M3cQ/edit?usp=sharing)
 - [Lista 4 - Funções](https://docs.google.com/document/d/1r2xgCZ9deXtuBg3t8I-8zjyoGCj8VR00xM1c2KdB3rY/edit?usp=sharing)
+- [Lista 5 - Classes](https://docs.google.com/document/d/1jN7t75e5EZuHT2ayuwMAPcURD7JbfEcHQ5cOP_nzbCg/edit?usp=sharing)
