@@ -297,7 +297,70 @@ fun saudacao(nome: String = "Visitante") {
 }
 
 ```
+# 📘 Classes em Kotlin
+
+## 🧠 O que é uma classe?
+
+Em Kotlin (e em outras linguagens orientadas a objetos), uma **classe** é um modelo ou molde que descreve as **características (propriedades)** e **comportamentos (métodos)** de um objeto.
+
+> 💬 Em resumo: **classe** é a forma, **objeto** é o conteúdo.
+
+Por exemplo, podemos ter a classe `Carro` como um molde, e dela criar vários objetos como `carro1`, `carro2`, etc.
+
 ---
+
+## 🧱 Estrutura básica de uma classe
+
+```kotlin
+class Carro {
+    var marca: String = ""
+    var modelo: String = ""
+    var ano: Int = 0
+
+    fun ligar() {
+        println("O carro $modelo está ligado!")
+    }
+}
+```
+Explicando o código:
+
+class Carro → Define a classe.
+
+var marca, var modelo, var ano → São propriedades (ou atributos).
+
+fun ligar() → É um método, ou seja, uma função dentro da classe.
+
+## Criando e usando objetos
+Para usar uma classe, criamos objetos dela (ou seja, instâncias):
+```
+fun main() {
+    val carro1 = Carro()
+    carro1.marca = "Fiat"
+    carro1.modelo = "Uno"
+    carro1.ano = 2010
+
+    carro1.ligar()
+}
+```
+## Construtores
+
+O Kotlin facilita a criação de construtores, que são formas de inicializar objetos com valores logo ao criá-los.
+
+```
+class Carro(val marca: String, val modelo: String, var ano: Int) {
+    fun exibirInfo() {
+        println("Marca: $marca | Modelo: $modelo | Ano: $ano")
+    }
+}
+
+fun main() {
+    val carro = Carro("Honda", "Civic", 2020)
+    carro.exibirInfo()
+}
+
+```
+---
+
 
 ## 📂 Lista de Atividades
 - [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing) (inicio 16/09| fim: 18/09) 
